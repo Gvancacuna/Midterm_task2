@@ -56,39 +56,37 @@ function algorithm(circles) {
   }
   return point;
 }
-function historyRecord(message, winner) {
-  let update = document.createElement("li");
-  update.textContent = message;
-  gameHistory.appendChild(update);
-  winnerAnnouncement.textContent = winner;
-}
 function rolling(circles, circles2) {
   round++;
   const rolled = algorithm(circles);
   const rolled2 = algorithm(circles2);
   console.log(rolled, rolled2);
-  let message =
-    "Round " +
-    round +
-    " Player 1 rolled " +
-    rolled +
-    ",Player 2 rolled " +
-    rolled2;
   if (rolled == rolled2) {
-    historyRecord(message +"→🤝 It is a Draw!","Draw");
+    winnerAnnouncement.textContent = "Draw";
+    let update = document.createElement("li");
+    update.textContent =
+      "Round" + round+" Player 1 rolled "+rolled+"Player 2 rolled "+ rolled2+"→🤝 It is a Draw!";
+    gameHistory.appendChild(update);
     return;
   } else if (rolled > rolled2) {
     score1 += 1;
     player1_score.textContent = score1;
-    historyRecord(message + "→ 🏆Player 1 Wins!", "Player 1 Won");
+  let update = document.createElement("li");
+    update.textContent ="Round" + round+" Player 1 rolled "+rolled+"Player 2 rolled "+ rolled2+"→ 🏆Player 1 Wins!"
+      ;
+      gameHistory.appendChild(update);
+    winnerAnnouncement.textContent = "Player 1 Won";
   } else {
     score2 += 1;
     player2_score.textContent = score2;
-    historyRecord(message + "→ 🏆Player 2 Wins!", "Player 2 Won");
+    let update = document.createElement("li");
+    update.textContent = update.textContent ="Round" + round+" Player 1 rolled "+rolled+"Player 2 rolled "+ rolled2+"→ 🏆Player 2 Wins!"
+      ;
+      gameHistory.appendChild(update);
+    winnerAnnouncement.textContent = "Player 2 Won";
   }
-  gameHistory.scrollTop = gameHistory.scrollHeight;
+  
 }
-// console.log(circles);
 function resetDice(circles) {
   circles.forEach((circle, index) => {
     if (index === 3) {
@@ -106,5 +104,5 @@ reset.addEventListener("click", (event) => {
   winnerAnnouncement.textContent = "Start the game";
   resetDice(circles);
   resetDice(circles2);
-  gameHistory.replaceChildren();
+  gameHistory.replaceChildren()
 });
