@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dice Game</h1>
+      <p>Reset the game</p>
+      <div class="scores">
+        <div>player 1 score:<span id="player1Score"></span></div>
+        <div>player 2 score:<span id="player2Score"></span></div>
+      </div>
+      <div class="winner"></div>
+      <div class="dices">
+        <div class="dice">
+          <div>
+            <div class="circle black"></div>
+            <div class="circle black"></div>
+          </div>
+          <div>
+            <div class="circle black"></div>
+            <div class="circle black"></div>
+            <div class="circle black"></div>
+          </div>
+          <div>
+            <div class="circle black"></div>
+            <div class="circle black"></div>
+          </div>
+        </div>
+        <div style="font-weight: 700; font-size: 2rem">vs</div>
+        <div class="dice2">
+          <div>
+            <div class="circle black"></div>
+            <div class="circle black"></div>
+          </div>
+          <div>
+            <div class="circle black"></div>
+            <div class="circle black"></div>
+            <div class="circle black"></div>
+          </div>
+          <div>
+            <div class="circle black"></div>
+            <div class="circle black"></div>
+          </div>
+        </div>
+      </div>
+
+      <button id="rollBtn">ROLL</button>
+      <div class="history">Game History</div>
+      <ul></ul>
+    </div>
+  </body>
+  <script src="script2.js"></script>
+</html>

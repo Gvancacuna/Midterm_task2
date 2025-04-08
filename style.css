@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Intel;
+  line-height: 100%;
+  font-weight: 600px;
+  color: #000000;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #d9d9d9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.container {
+  padding: 15px 15px 15px 18px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  min-width: 400px;
+  /* gap: 15px; */
+  justify-content: space-around;
+  /* max-height: 700px; */
+  height: 100vh;
+
+}
+.dice,.dice2 {
+  width: 98px;
+  height: 98px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7px;
+  box-shadow: 8px 8px #000000;
+}
+.circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+}
+.black {
+  background-color: black;
+}
+.dice > div {
+  display: flex;
+  justify-content: space-between;
+}
+.dice2 > div {
+    display: flex;
+    justify-content: space-between;
+  }
+.dices{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+}
+.winner{
+    color: #af2d2d;
+    font-size: 2.1rem;
+    font-weight: 700;
+    height: 40px;
+
+}
+#rollBtn{
+    width: 160px;
+    min-height: 50px;
+    border:1px solid #DF2E38;
+    border-radius: 14px;
+    background-color: #DF2E38;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+}
+.scores{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+h1{
+  margin-top: 3vh;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #070a52;
+}
+h1+p{
+  font-weight: 700;
+  font-size: 1.10rem;
+  text-transform: uppercase;
+
+}
+.scores div{
+  font-size: 1.10rem;
+  text-transform: uppercase;
+
+}
+.history {
+  color: #247527;
+  font-size: 2.0rem;
+}
+ul{
+  height: 20vh;
+  overflow-x: auto; /* Enable vertical scrolling only when needed */
+  scrollbar-width: none; /* Optional: make the scrollbar thinner */
+  scrollbar-color: #888 #ddd; 
+}
+ul li{
+  padding-bottom: 15px;
+  display: flex;
+  padding-right: 1rem;
+  list-style:circle;
+  width: 100%;
+
+}
+#player1Score,#player2Score{
+  padding-left: 7px;
+  color: #FF0202;
+
+}
