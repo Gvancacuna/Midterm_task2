@@ -65,14 +65,14 @@ function rolling(circles, circles2) {
     winnerAnnouncement.textContent = "Draw";
     let update = document.createElement("li");
     update.textContent =
-      "Round" + round+" Player 1 rolled "+rolled+"Player 2 rolled "+ rolled2+"→🤝 It is a Draw!";
+      "Round " + round+" Player 1 rolled "+rolled+",Player 2 rolled "+ rolled2+"→🤝 It is a Draw!";
     gameHistory.appendChild(update);
     return;
   } else if (rolled > rolled2) {
     score1 += 1;
     player1_score.textContent = score1;
   let update = document.createElement("li");
-    update.textContent ="Round" + round+" Player 1 rolled "+rolled+"Player 2 rolled "+ rolled2+"→ 🏆Player 1 Wins!"
+    update.textContent ="Round " + round+" Player 1 rolled "+rolled+",Player 2 rolled "+ rolled2+"→ 🏆Player 1 Wins!"
       ;
       gameHistory.appendChild(update);
     winnerAnnouncement.textContent = "Player 1 Won";
@@ -80,11 +80,13 @@ function rolling(circles, circles2) {
     score2 += 1;
     player2_score.textContent = score2;
     let update = document.createElement("li");
-    update.textContent = update.textContent ="Round" + round+" Player 1 rolled "+rolled+"Player 2 rolled "+ rolled2+"→ 🏆Player 2 Wins!"
+    update.textContent = update.textContent ="Round " + round+" Player 1 rolled "+rolled+",Player 2 rolled "+ rolled2+"→ 🏆Player 2 Wins!"
       ;
       gameHistory.appendChild(update);
     winnerAnnouncement.textContent = "Player 2 Won";
   }
+
+  gameHistory.scrollTop = gameHistory.scrollHeight;
   
 }
 function resetDice(circles) {
