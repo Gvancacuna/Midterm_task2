@@ -16,11 +16,14 @@
     <div class="container">
       <h1>Dice Game</h1>
       <p>Reset the game</p>
-      <div class="scores">
+      <!-- this is a row of players scores -->
+      <div id="scores">
         <div>player 1 score:<span id="player1Score"></span></div>
         <div>player 2 score:<span id="player2Score"></span></div>
       </div>
-      <div class="winner"></div>
+      <!-- After every row js gives text to winner clas and annonunces winner -->
+      <div id="winner"></div>
+      <!-- this is a dices row and every dice div has 7 dots inside -->
       <div class="dices">
         <div class="dice">
           <div>
@@ -54,9 +57,9 @@
           </div>
         </div>
       </div>
-
       <button id="rollBtn">ROLL</button>
-      <div class="history">Game History</div>
+      <div id="history">Game History</div>
+      <!-- this is unordered list container for history updates -->
       <ul></ul>
     </div>
   </body>
